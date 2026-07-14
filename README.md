@@ -9,14 +9,7 @@ projects.
 ![Build](https://img.shields.io/badge/build_step-none-2ea44f)
 ![Deployment](https://img.shields.io/badge/deployment-GitHub_Pages-f59e0b)
 
-## Live preview
-
-[Open the portfolio on GitHub Pages](https://sriman-kunda-056.github.io/portfolio.io/)
-
-The site is a static root-level `index.html`, so it can be served directly by
-GitHub Pages without a build pipeline.
-
-## At a glance
+## Evidence at a glance
 
 | Verified page content | Count |
 | --- | ---: |
@@ -27,7 +20,21 @@ GitHub Pages without a build pipeline.
 | Positions of responsibility | **2** |
 | Achievement cards | **2** |
 
-## Page map
+## Preview
+
+[Open the portfolio on GitHub Pages](https://sriman-kunda-056.github.io/portfolio.io/)
+
+The site is a static root-level `index.html`, so it can be served directly by
+GitHub Pages without a build pipeline.
+
+## What it does
+
+- Presents an introduction, skills, education, projects, responsibilities, and
+  achievements in one responsive page.
+- Links the public resume and project profiles from the root GitHub Pages site.
+- Runs without a package manager or build step.
+
+## Architecture
 
 ```mermaid
 flowchart LR
@@ -39,7 +46,7 @@ flowchart LR
     R --> C["Achievements + contact"]
 ```
 
-## Run locally
+## Quick start
 
 ```bash
 git clone https://github.com/Sriman-Kunda-056/portfolio.io.git
@@ -56,7 +63,7 @@ Open <http://localhost:8000>.
 - Inline responsive styling
 - GitHub Pages deployment
 
-## Repository notes
+## Limitations
 
 - The working version keeps `index.html` at the repository root.
 - The page currently depends on external Tailwind, Google Fonts, and placeholder
@@ -64,3 +71,34 @@ Open <http://localhost:8000>.
 - The mobile navigation is hidden on narrow screens and does not yet have a
   replacement menu.
 - Contact details and the linked resume are intentionally public portfolio data.
+
+## Tests and validation
+
+No automated browser suite is tracked. Before publishing a portfolio update,
+serve the root locally and check desktop and mobile layouts, navigation links,
+project URLs, resume access, and the browser console.
+
+## Repository layout
+
+```text
+portfolio.io/
+|-- index.html            # Complete single-page portfolio
+|-- Resume.pdf            # Public resume linked by the page
+`-- README.md             # Project evidence and operating notes
+```
+
+## Numbered commit history
+
+1. `Initial` - publish the root-level portfolio and resume.
+2. `01` - document the working Pages structure and add page metadata.
+3. `02` - standardize the evidence-first GitHub README format.
+
+## Suggested GitHub topics
+
+`portfolio` `github-pages` `html` `tailwindcss` `responsive-design`
+`full-stack` `machine-learning` `iot`
+
+## License and attribution
+
+No repository-wide license file is included. Tailwind CSS, Google Fonts, and
+external image services remain subject to their respective licenses and terms.
